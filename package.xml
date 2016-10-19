@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <package format="2">
   <name>imu_3dm_gx3_ros_tool</name>
   <version>1.0.0</version>
@@ -24,6 +23,12 @@
   <depend>sensor_msgs</depend>
   <depend>tf</depend>
   
+  <depend>diagnostic_updater</depend>
+  <depend>dynamic_reconfigure</depend>
+  <depend>eigen_conversions</depend>
+  <depend>rosparam_handler</depend>
+  <depend>utils_ros</depend>
+  
   <export>
-  </export>
+  <nodelet plugin="${prefix}/nodelet_plugins.xml" /></export>
 </package>

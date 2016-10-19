@@ -1,0 +1,6 @@
+<library path="lib/libimu_3dm_gx3_nodelet">
+<class name="imu_3dm_gx3_ros_tool/Imu3dmGx3Nodelet"
+       type="imu_3dm_gx3_ros_tool::Imu3dmGx3Nodelet" base_class_type="nodelet::Nodelet">
+  <description></description>
+</class>
+</library>

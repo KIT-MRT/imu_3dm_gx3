@@ -1,0 +1,5 @@
+verbosity: debug
+
+msg_name_publisher: /sensor/imu
+frame_id: /sensor/imu
+port: /dev/ttyACM0

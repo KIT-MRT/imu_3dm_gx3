@@ -1,0 +1,18 @@
+<launch>
+
+    <arg name="config" default="$(find imu_3dm_gx3_ros_tool)/launch/params/imu_3dm_gx3_parameters.yaml"/>
+    <arg name="nodelet_manager_name" default="nodelet_manager_imu_3dm_gx3"/>
+    <arg name="start_nodelet_manager" default="true"/>
+    <arg name="nodelet_name" default="imu_3dm_gx3"/>
+
+    <!-- Nodelet manager (if enabled) -->
+    <node pkg="nodelet" type="nodelet" name="$(arg nodelet_manager_name)" args="manager" output="screen"
+          if="$(arg start_nodelet_manager)"/>
+
+    <!-- Imu3dmGx3 -->
+    <node pkg="nodelet" type="nodelet" name="$(arg nodelet_name)"
+          args="load imu_3dm_gx3_ros_tool/Imu3dmGx3Nodelet $(arg nodelet_manager_name)" output="screen" required="true">
+        <rosparam command="load" file="$(arg config)"/>
+    </node>
+
+</launch>
